@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netlify Form Example</title>
+</head>
+<body>
+
+<form name="contact" method="POST" data-netlify="true" enctype="multipart/form-data" action="/success" data-netlify-honeypot="bot-field">
+    <!-- The `form-name` hidden input is required for Netlify -->
+    <input type="hidden" name="form-name" value="contact">
+
+    <!-- Honeypot field to prevent spam submissions -->
+    <p style="visibility: hidden; position: absolute;">
+        <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+    </p>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="registration_id">Registration ID:</label>
+    <input type="text" id="registration_id" name="registration_id" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="image">Image Upload:</label>
+    <input type="file" id="image" name="image" accept="image/*" required>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
